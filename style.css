@@ -1,0 +1,24 @@
+    .left-col {
+        background-color: aqua;
+        width: 15%;
+        padding-bottom: 100%;
+        float: left;
+    }
+    
+    .right-col {
+        background-color: aqua;
+        width: 10%;
+        float: right;
+    }
+    
+    .center-col {
+        padding-top: 25%;
+        position: absolute;
+        left: 25%;
+    }
+    /* display: flex; */
+    /*this are the*/
+    /* justify-content: center; */
+    /*three lines*/
+    /* align-items: center; */
+    /*lines hold box in center  */

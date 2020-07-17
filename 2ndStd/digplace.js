@@ -10,21 +10,16 @@ let acceptAns=true;
 let score=0;
 let QueCounter=0;
 let availabelQue=[];
-let questions=[]
-
+let questions=[];
 getRandomInt=(min,max)=>
 {
   return Math.floor(Math.random()*(max-min+1))+min;
 };
-
 getRandomfromList=(LisT)=>{
-    var tempindx = getRandomInt(0,(LisT.length-1));
-    var temp=LisT[tempindx];
-
-    LisT[tempindx]=" _ ";
-    return temp;
+    var temp = getRandomInt(0,(LisT.length-1));
+    return LisT[temp];
+    
 };
-
 getRange=(min,max)=>{
     var ary =[];
     for (let i = min; i <= max; i++) {
@@ -46,50 +41,61 @@ shuffle=(array)=>{
 };
 QueStore=[];
 QueGen=(questions)=>{
-    var first_no = getRandomInt(0,9);
-    var step =  getRandomInt(1,9);
-    while(QueStore.includes([first_no,step])){
-        first_no = getRandomInt(0,9);
-        step=getRandomInt(1,9);
+    var a = getRandomInt(100,9999),atemp=a;
+    while(QueStore.includes(a)){
+        a = getRandomInt(100,9999);
     }
-    QueStore.push([first_no,step]);
-    var arr=[],choices=[];
-    arr[0]=first_no;
-    for (let index = 1; index <=5; index++) {
-        arr[index]=arr[index-1]+step;
-    }
-    var rando = getRandomfromList(arr);
-    choices[0]=rando;
-    for (let index = 1; index <=3; index++) {
-        var st=getRandomInt(first_no,100);
-        while(st==rando){
-            st=getRandomInt(first_no,100);
+    QueStore.push(a); 
+	var t=atemp.toString().length;
+	var arr=[];
+	var temp,tmp,dig_place,res;
+	if  (t==3){
+        arr[0]="#";
+		for (var i =t;i>0;i--){
+		 	arr[i]=atemp%10;
+		 	atemp=Math.trunc(atemp/10);
+		}
+	}else{
+		for (var i =t;i>0;i--){
+		 	arr[i-1]=atemp%10;
+		 	atemp=Math.trunc(atemp/10);
+		}
+	}
+	if (t==4){
+		tmp=getRandomInt(0,t-1);
+	}else{
+		tmp=getRandomInt(1,t-1);
+	}
+
+	var Q=arr[tmp];
+	dig_place=["Thousand","Hundred","Ten","Unit"];
+    var Que="What is the digit place of "+"<span style='color:blue'>"+Q+"</span>"+" in ";                     
+    var n;                                                                                                                                                                                                                              
+    if(t==3){ n=1;}
+    else{ n=0;}
+    for(var j=n;j<=3;j++){ 
+        if(j==tmp){
+        Que+="<span style='color:blue'>"+arr[j]+"</span>";
         }
-        choices.push(st);
-        console.log(choices,st);
+        else{
+        Que+=arr[j];
+        }
     }
-    shuffle(choices);
-    var Que="Find the missing number from following sequences : \n";
-    for(var j=0;j<=5;j++){ 
-        if (j==5){
-            Que+=arr[j]+".";
-        }else{
-        Que+=arr[j]+' , ';}
-    }
+    Que+=" ?";
+    res=dig_place[tmp];
     var obj={
         question:Que,
-        choice1:choices[0].toString(),
-        choice2:choices[1].toString(),
-        choice3:choices[2].toString(),
-        choice4:choices[3].toString(),
-        answer:(choices.indexOf(rando)+1),
+        choice1:dig_place[0],
+        choice2:dig_place[1],
+        choice3:dig_place[2],
+        choice4:dig_place[3],
+        answer:''+(tmp+1),
     };
     questions.push(obj);
 };
 for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
-
 const CORRECT_BONUS=10;
 const MAX_QUESTIONS=questions.length;
 

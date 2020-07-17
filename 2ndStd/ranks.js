@@ -11,18 +11,13 @@ let score=0;
 let QueCounter=0;
 let availabelQue=[];
 let questions=[]
-
 getRandomInt=(min,max)=>
 {
   return Math.floor(Math.random()*(max-min+1))+min;
 };
-
 getRandomfromList=(LisT)=>{
-    var tempindx = getRandomInt(0,(LisT.length-1));
-    var temp=LisT[tempindx];
-
-    LisT[tempindx]=" _ ";
-    return temp;
+    var temp = getRandomInt(0,(LisT.length-1));
+    return LisT[temp];
 };
 
 getRange=(min,max)=>{
@@ -32,7 +27,9 @@ getRange=(min,max)=>{
     };
     return ary;
 };
-
+zip=(arr,...ars)=>{
+    return arr.map((val,i)=>ars.reduce((a,arr)=>[...a,arr[i]],[val]));
+}
 shuffle=(array)=>{
     var currNdx=array.length,temp,ranIndx;
     while(0!==currNdx){
@@ -44,52 +41,48 @@ shuffle=(array)=>{
     }
     return array;
 };
-QueStore=[];
 QueGen=(questions)=>{
-    var first_no = getRandomInt(0,9);
-    var step =  getRandomInt(1,9);
-    while(QueStore.includes([first_no,step])){
-        first_no = getRandomInt(0,9);
-        step=getRandomInt(1,9);
+
+var a = getRandomInt(20,100);
+var b = getRandomInt(20,100);
+var c = getRandomInt(20,100);
+var d = getRandomInt(20,100);
+var Q = getRandomInt(1,4);
+var marks = [a,b,c,d];
+var Choices=[];
+marks.sort().reverse();
+var Ans=getRandomfromList(marks);
+console.log(marks);
+NameSet=[["Monica","Ross","Joey","Chandler"],["Mohini","Raj","Komal","Vinay"],["Maya","Ravi","Jiten","Chirag"],["Suraj","Pratik","Jay","Prakash"]];
+ranks=["1st Rank","2nd Rank","3rd Rank","4th Rank"];
+Studs=getRandomfromList(NameSet);
+shuffle(Studs);
+TotData=zip(Studs,marks,ranks);
+shuffle(TotData);
+var Que="If in a test, "+TotData[0][0]+" scores "+TotData[0][1]+", "+TotData[1][0]+" scores "+TotData[1][1]+", "+TotData[2][0]+" scores "+TotData[2][1]+", "+TotData[3][0]+" scores "+TotData[3][1];
+for(var i=0;i<4;i++){
+    if (TotData[i][1]==Ans){
+        Ans=TotData[i];
+        console.log(Ans);
+        temp=i;
+        Que+="<br/> What is "+Ans[0]+"'s Rank?";
     }
-    QueStore.push([first_no,step]);
-    var arr=[],choices=[];
-    arr[0]=first_no;
-    for (let index = 1; index <=5; index++) {
-        arr[index]=arr[index-1]+step;
-    }
-    var rando = getRandomfromList(arr);
-    choices[0]=rando;
-    for (let index = 1; index <=3; index++) {
-        var st=getRandomInt(first_no,100);
-        while(st==rando){
-            st=getRandomInt(first_no,100);
-        }
-        choices.push(st);
-        console.log(choices,st);
-    }
-    shuffle(choices);
-    var Que="Find the missing number from following sequences : \n";
-    for(var j=0;j<=5;j++){ 
-        if (j==5){
-            Que+=arr[j]+".";
-        }else{
-        Que+=arr[j]+' , ';}
-    }
-    var obj={
-        question:Que,
-        choice1:choices[0].toString(),
-        choice2:choices[1].toString(),
-        choice3:choices[2].toString(),
-        choice4:choices[3].toString(),
-        answer:(choices.indexOf(rando)+1),
-    };
+}
+var obj={
+    question:Que,
+    choice1:TotData[0][2].toString(),
+    choice2:TotData[1][2].toString(),
+    choice3:TotData[2][2].toString(),
+    choice4:TotData[3][2].toString(),
+    answer:''+(temp+1),
+};
+console.log(obj.answer)
     questions.push(obj);
 };
+
 for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
-
 const CORRECT_BONUS=10;
 const MAX_QUESTIONS=questions.length;
 

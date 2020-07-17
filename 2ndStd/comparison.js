@@ -90,8 +90,7 @@ QueGen=(questions)=>{
     };
     questions.push(obj);
 };
-for (let index = 0; index < 5 ;index++) {
-    console.log("#"+(index+1));
+for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
 const CORRECT_BONUS=10;

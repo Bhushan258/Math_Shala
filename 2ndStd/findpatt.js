@@ -83,7 +83,7 @@ QueGen=(questions)=>{
     };
     questions.push(obj);
 };
-for (let index = 0; index < 5 ;index++) {
+for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
 

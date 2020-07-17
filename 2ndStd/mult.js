@@ -11,18 +11,13 @@ let score=0;
 let QueCounter=0;
 let availabelQue=[];
 let questions=[]
-
 getRandomInt=(min,max)=>
 {
   return Math.floor(Math.random()*(max-min+1))+min;
 };
-
 getRandomfromList=(LisT)=>{
-    var tempindx = getRandomInt(0,(LisT.length-1));
-    var temp=LisT[tempindx];
-
-    LisT[tempindx]=" _ ";
-    return temp;
+    var temp = getRandomInt(0,(LisT.length-1));
+    return LisT[temp];
 };
 
 getRange=(min,max)=>{
@@ -32,7 +27,9 @@ getRange=(min,max)=>{
     };
     return ary;
 };
-
+zip=(arr,...ars)=>{
+    return arr.map((val,i)=>ars.reduce((a,arr)=>[...a,arr[i]],[val]));
+}
 shuffle=(array)=>{
     var currNdx=array.length,temp,ranIndx;
     while(0!==currNdx){
@@ -44,52 +41,37 @@ shuffle=(array)=>{
     }
     return array;
 };
-QueStore=[];
 QueGen=(questions)=>{
-    var first_no = getRandomInt(0,9);
-    var step =  getRandomInt(1,9);
-    while(QueStore.includes([first_no,step])){
-        first_no = getRandomInt(0,9);
-        step=getRandomInt(1,9);
-    }
-    QueStore.push([first_no,step]);
-    var arr=[],choices=[];
-    arr[0]=first_no;
-    for (let index = 1; index <=5; index++) {
-        arr[index]=arr[index-1]+step;
-    }
-    var rando = getRandomfromList(arr);
-    choices[0]=rando;
-    for (let index = 1; index <=3; index++) {
-        var st=getRandomInt(first_no,100);
-        while(st==rando){
-            st=getRandomInt(first_no,100);
-        }
-        choices.push(st);
-        console.log(choices,st);
+    var dig = getRange(1,10)
+    var x = getRandomInt(1,10);
+    var y = getRandomInt(1,10);
+    var z = x * y;
+    var choices=[];
+    choices[0]=z;
+   
+    for (let i=1; i<=3; i++){
+         var st=getRandomfromList(dig);
+         while(choices.includes(st)){
+            st=getRandomfromList(dig);
+         }
+         choices.push(st);
     }
     shuffle(choices);
-    var Que="Find the missing number from following sequences : \n";
-    for(var j=0;j<=5;j++){ 
-        if (j==5){
-            Que+=arr[j]+".";
-        }else{
-        Que+=arr[j]+' , ';}
-    }
+    var Que="What is  "+x+" X "+y+"  ? ";
     var obj={
         question:Que,
         choice1:choices[0].toString(),
         choice2:choices[1].toString(),
         choice3:choices[2].toString(),
         choice4:choices[3].toString(),
-        answer:(choices.indexOf(rando)+1),
+        answer:(choices.indexOf(z)+1),
     };
+    console.log(obj.answer);
     questions.push(obj);
 };
 for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
-
 const CORRECT_BONUS=10;
 const MAX_QUESTIONS=questions.length;
 

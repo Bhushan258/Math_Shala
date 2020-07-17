@@ -72,7 +72,7 @@ QueGen=(questions)=>{
         choices.push(ball.repeat(sumte));
     }
     shuffle(choices);
-    var Que="Represent the following no. "+sum+" in group of "+grp+"\n (This emoji "+ball+" = "+grp+")";
+    var Que="Represent the following no. "+sum+" in group of "+grp+" <br> (This emoji "+ball+" = "+grp+")";
     
     var obj={
         question:Que,
@@ -85,8 +85,7 @@ QueGen=(questions)=>{
     console.log(obj.answer);
     questions.push(obj);
 };
-for (let index = 0; index < 5 ;index++) {
-    console.log("#"+(index+1));
+for (let index = 0; index < 10 ;index++) {
     QueGen(questions);
 };
 

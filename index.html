@@ -22,7 +22,7 @@
 <body>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="">Math-Shala</a>
+        <a class="navbar-brand" href="index.html" >Math-Shala</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -45,22 +45,24 @@
         </div>
     </nav>
 
-
-
     <div class="left-col">
-        <h2>text</h2>
-        <p> <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br>
-            <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br> <a class="link" href=""> text </a> <br>
+        <p id="linklist">
+            <h4>Standards</h4>
+            <p class="choice-std"><a class="link" href="hp1.html">1st Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp2.html">2nd Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp3.html">3rd Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp4.html">4th Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp5.html">5th Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp6.html">6th Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp7.html">7th Standard</a></p><br>
+            <p class="choice-std"><a class="link" href="hp8.html">8th Standard</a></p><br>
         </p>
     </div>
-
-
 
     <div class="center-col">
     </div>
 
     <!--
-
     <div class="right-col">
         <h2>
             text
@@ -69,8 +71,21 @@
 
     -->
 
-
-
+<script>
+const choice = Array.from(document.getElementsByClassName("choice-std"));
+console.log(choice);
+let acceptAns=true;
+choice.forEach( choice => {
+    choice.addEventListener("click", e =>{
+        if (!acceptAns) return;
+        acceptAns=false;
+        const selectedChoice=e.target;
+        const selectedAns=selectedChoice.dataset["js"];
+        console.log(selectedAns);
+        localStorage.setItem("JS-Link",selectedAns)
+    });
+});
+</script>
 </body>
 
 </html>

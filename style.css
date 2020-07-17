@@ -1,7 +1,7 @@
     .left-col {
         text-align:center;
         background-color: grey;
-        width: 10%;
+        width: 10.5%;
         padding-bottom: 100%;
         float: left;
     }
@@ -18,15 +18,18 @@
         left: 25%;
     }
     
-    h2 {
+    h4 {
+        color: white;
+        border-bottom: 0.2rem solid white;
+        padding-bottom: 0.5rem;
+        padding-top: 0;
+    }
+    
+    a.link {
         color: white;
     }
     
-    .link {
-        color: white;
-    }
-    
-    .link:hover {
+    a.link:hover {
         color: black;
         text-decoration: none;
     }
@@ -40,13 +43,17 @@
         font-family: 'Poppins', sans-serif;
     }
     
-    .navbar-brand {
+    a.navbar-brand {
         font-family: 'Poppins', sans-serif;
-        font-size: 4rem;
+        font-size: 200%;
+        border-bottom: 0.2rem solid white;
+        padding-bottom: 0.01rem;
+        padding-top: 0;
     }
     
     a {
         font-family: 'Poppins', sans-serif;
+        font-size: 150%;
     }
     
 p{ font-family: 'Poppins', sans-serif;}

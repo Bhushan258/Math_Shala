@@ -28,6 +28,23 @@
     .link:hover {
         color: black;
     }
+
+    h1,
+    h2,
+    h3,
+    h3,
+    h4,
+    h6 {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    a {
+        font-family: 'Poppins', sans-serif;
+    }
     /* display: flex; */
     /*this are the*/
     /* justify-content: center; */

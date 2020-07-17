@@ -1,12 +1,12 @@
     .left-col {
-        background-color: aqua;
-        width: 15%;
+        background-color: grey;
+        width: 10%;
         padding-bottom: 100%;
         float: left;
     }
     
     .right-col {
-        background-color: aqua;
+        background-color: grey;
         width: 10%;
         float: right;
     }
@@ -15,6 +15,18 @@
         padding-top: 25%;
         position: absolute;
         left: 25%;
+    }
+    
+    h2 {
+        color: white;
+    }
+    
+    .link {
+        color: white;
+    }
+    
+    .link:hover {
+        color: black;
     }
     /* display: flex; */
     /*this are the*/

@@ -56,10 +56,12 @@
         font-size: 150%;
     }
     
-p{ font-family: 'Poppins', sans-serif;}
-    /* display: flex; */
-    /*this are the*/
-    /* justify-content: center; */
-    /*three lines*/
-    /* align-items: center; */
-    /*lines hold box in center  */
+    a.navbar-brand:hover {
+        text-shadow: 0 0.4rem 1.4rem rgba(245, 245, 245,0.8);
+        transform: translateY(-0.1rem);
+        transition: transform 150ms;    
+    }
+    p{ 
+        font-family: 'Poppins', sans-serif;
+    }
+   

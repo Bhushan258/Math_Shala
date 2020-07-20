@@ -86,7 +86,7 @@
         /* 0.5 second transition effect to slide in the sidebar */
     }
     /* The sidebar links */
-    .sidebar h4{
+    .sidebar > h4{
         text-align:center;
     }
     .sidebar a {

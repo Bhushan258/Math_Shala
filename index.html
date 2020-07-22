@@ -46,7 +46,7 @@
     </nav>
     <div id="mySidebar" class="sidebar">
         <p id="linklist">
-            <a class="navbar-brand" href="index.html" >Math-Shala</a>
+            <a class="navbar-brand" id="side-head" href="index.html">Math-Shala</a>
             <h4 id="hed">Standards</h4>
             <p class="choice-std"><a class="link" href="hp1.html">1st Standard</a></p><br>
             <p class="choice-std"><a class="link" href="hp2.html">2nd Standard</a></p><br>
@@ -62,10 +62,40 @@
     <div id="main">
         <button class="openbtn" id="btn" value="OFF" onclick="toggle()">&#9776; Sidebar</button>
     </div>
-    <div class="center-col">
-        <h2> Welcome to our page! </h2>
-        <p>Here, we hope to help you understand the difficult lessons that you might not have understood in school.Not everybody understands the lessons taught in school, that is why we have made this website to help you. We have lessons from 1st standard toeighth standard, so we have somethimg for everyone. If you find that some important topic is missing that you would like added, please contactus and we will try to add the topic as soon as possible.
-So, with that said, we look forward to aiding you in understanding your subjects better. This website was created by students for students,so we understand your struggles. We thank you for choosing us.</p>
+    <script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    function toggle() {
+        if (document.getElementById("btn").value == "OFF") {
+            document.getElementById("btn").value = "ON";
+            openNav();
+        } else {
+            document.getElementById("btn").value = "OFF";
+            closeNav();
+        }
+
+    }
+    </script>
+    <div class="center-col" id="content">
+        <h2 style="font-size: 400%;"> Welcome to our page! </h2> <br>
+        <p>Here, we hope to help you understand the difficult lessons that you might not have understood in school.</p>
+        <p>Not everybody understands the lessons taught in school, that is why we have made this website to help you.</p>
+        <p>We have lessons from 1st standard to 8th standard, so we have something for everyone. If you find that</p> 
+        <p>some important topic is missing that you would like added, please contactus and we will try to add the topic</p>
+        <p>as soon as possible.</p> <br><br>
+           
+           
+        <p>So, with that said, we look forward to aiding you in understanding your subjects better. This website was created</p> 
+        <p>by students for students,so we understand your struggles. We thank you for choosing us.</p>
     </div>
 
     <!--
@@ -76,29 +106,7 @@ So, with that said, we look forward to aiding you in understanding your subjects
     </div>
 
     -->
-
 <script>
-    function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "250px";
-        }
-
-        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-
-        function toggle() {
-            if (document.getElementById("btn").value == "OFF") {
-                document.getElementById("btn").value = "ON";
-                openNav();
-            } else {
-                document.getElementById("btn").value = "OFF";
-                closeNav();
-            }
-
-        }
 const choice = Array.from(document.getElementsByClassName("choice-std"));
 console.log(choice);
 let acceptAns=true;

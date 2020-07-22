@@ -20,7 +20,7 @@
 <body>
     <!-- Image and text -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="">Math-Shala</a>
+        <a class="navbar-brand" href="index.html">Math-Shala</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -28,26 +28,25 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="">Home</a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Standards and Topics</a>
+                    <a class="nav-link" href="std_topic.html">Standards and Topics</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">About</a>
+                    <a class="nav-link" href="About.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="">Coming Soon..</a>
+                    <a class="nav-link" href="#">Coming Soon..</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-
-
-    <div class="left-col">
+    <div id="mySidebar" class="sidebar">
         <p id="linklist">
-            <h4>Standards</h4>
+            <a class="navbar-brand" id="side-head" href="index.html">Math-Shala</a>
+            <h4 id="hed">Standards</h4>
             <p class="choice-std"><a class="link" href="hp1.html">1st Standard</a></p><br>
             <p class="choice-std"><a class="link" href="hp2.html">2nd Standard</a></p><br>
             <p class="choice-std"><a class="link" href="hp3.html">3rd Standard</a></p><br>
@@ -59,50 +58,80 @@
         </p>
     </div>
 
+    <div id="main">
+        <button class="openbtn" id="btn" value="OFF" onclick="toggle()">&#9776; Sidebar</button>
+    </div>
+    <script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
 
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
 
-    <div class="center-col">
-        <div class="container">
-            <div id="game" class="justify-center flex-column">
-                <div id="hud">
-                    <div id="hud-item">
-                        <p id="ProgressText" class="hud-prefix">
-                            Question
-                        </p>
-                        <div id="progress-bar">
-                            <div id="progressBarFull">
+    function toggle() {
+        if (document.getElementById("btn").value == "OFF") {
+            document.getElementById("btn").value = "ON";
+            openNav();
+        } else {
+            document.getElementById("btn").value = "OFF";
+            closeNav();
+        }
 
-                            </div>
+    }
+    </script>
+
+<h3 id="std"></h3>
+
+<div class="center-col">
+    <div class="container">
+        <div id="game" >
+            <div id="hud">
+                <div id="hud-item">
+                    <p id="ProgressText" class="hud-prefix">
+                        Question
+                    </p>
+                    <div id="progress-bar">
+                        <div id="progressBarFull">
+
                         </div>
-                        </h1>
                     </div>
-                    <div id="hud-item">
-                        <p class="hud-prefix">
-                            Score
-                        </p>
-                        <h1 class="hud-main-text" id="Score">
-                            0
-                        </h1>
-                    </div>
+                    </h1>
                 </div>
-                <img id="shape" style="width:100px;height:100px;padding-top:0.5rem;"><br>
-                <h2 id="queID">What is answer to this question ?</h2>
-                <div class="choice-container">
-                    <p class="choice-prefix">A</p>
-                    <p class="choice-text" data-no="1">CH 1</p>
+                <div id="hud-item">
+                    <p class="hud-prefix">
+                        Score
+                    </p>
+                    <h1 class="hud-main-text" id="Score">
+                        0
+                    </h1>
                 </div>
-                <div class="choice-container">
-                    <p class="choice-prefix">B</p>
-                    <p class="choice-text" data-no="2">CH 2</p>
-                </div>
+            </div>
+            <img id="shape" style="width:100px;height:100px;padding-top:0.5rem;"><br>
+            <h2 id="queID">What is answer to this question ?</h2>
+            <div class="choice-container">
+                <p class="choice-prefix">A</p>
+                <p class="choice-text" data-no="1">CH 1</p>
+            </div>
+            <div class="choice-container">
+                <p class="choice-prefix">B</p>
+                <p class="choice-text" data-no="2">CH 2</p>
             </div>
         </div>
     </div>
+</div>
     <script id="JsLink"></script>
     <script type="text/javascript">
+        const name=localStorage.getItem("Title");
         const Jlink=localStorage.getItem("JS-Link");
-        const scrtag=document.getElementById("JsLink")
+        const scrtag=document.getElementById("JsLink");
+        const stdn=document.getElementById("std");
         scrtag.setAttribute("src",Jlink);
+        stdn.innerHTML=name;
     </script>
 
     <!--

@@ -1,19 +1,5 @@
-    .left-col {
-        text-align:center;
-        background-color: grey;
-        width: 10.5%;
-        padding-bottom: 100%;
-        float: left;
-    }
-    
-    .right-col {
-        background-color: grey;
-        width: 10%;
-        float: right;
-    }
-    
     .center-col {
-        background-color: azure;
+        background-color:whitesmoke;
         left: 20%;
         right: 20%;
     }
@@ -53,7 +39,10 @@
     h6 {
         font-family: 'Poppins', sans-serif;
     }
-    
+    .navbar{
+        background-color: #374785!important;
+    }
+
     a.navbar-brand {
         font-family: 'Poppins', sans-serif;
         width: fit-content;
@@ -147,14 +136,14 @@
         transition: margin-left .5s;
         /* If you want a transition effect */
         padding: 20px;
-        background-color: azure;
+        background-color: whitesmoke;
     }
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
     
     @media screen and (min-height: 450px) {
         
         .center-col{
-            padding-top: 5.5rem;;
+            padding-top: 2.5rem;;
         }
         .sidebar {
             padding-top: 15px;
@@ -172,6 +161,26 @@
     margin-bottom: 2rem;
     border: 0;
 
+}
+.bttn{
+    width: 20rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    border: 0.1rem solid #444;
+    box-shadow: 0 0.4rem 1.4rem rgba(69, 81, 85, 0.9);
+    text-align: center;
+}
+.bttn:hover{
+    text-decoration: none;
+    font-size: 1.8rem;
+    background-color: steelblue;
+    color: whitesmoke;
+}
+#finalscore{
+    padding-bottom: 0.7rem;
+    font-size: 5rem;
+    font-weight: 500;
 }
 #side-head{
     margin: 0 auto;

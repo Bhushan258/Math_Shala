@@ -45,7 +45,7 @@
     </nav>
 
     <div id="mySidebar" class="sidebar">
-        <p id="linklist">
+        <p id="linklist"  data-title="<-:&nbsp 8th Standard&nbsp:->">
             <a class="navbar-brand" id="side-head" href="index.html">Math-Shala</a>
             <h4 style="text-align: center;">8th Standard's Topics</h4>
             <!-- <h3 class="link" >Shapes :</h3><br>
@@ -120,19 +120,7 @@
 
     -->
 
-    <script>
-        const choice = Array.from(document.getElementsByClassName("choice-topic"));
-        let acceptAns=true;
-        choice.forEach( choice => {
-            choice.addEventListener("click", e =>{
-                if (!acceptAns) return;
-                acceptAns=false;
-                const selectedChoice=e.target;
-                selectedAns=selectedChoice.dataset["js"];
-                localStorage.setItem("JS-Link",selectedAns)
-            });
-        });
-        </script>
+    <script src="hp.js"></script>
 </body>
 
 </html>

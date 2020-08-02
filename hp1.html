@@ -129,7 +129,9 @@
                 acceptAns=false;
                 const selectedChoice=e.target;
                 selectedAns=selectedChoice.dataset["js"];
-                localStorage.setItem("JS-Link",selectedAns)
+                selectedAnS=selectedChoice.dataset["title"];
+                localStorage.setItem("JS-Link",selectedAns);
+                localStorage.setItem("Title",selectedAnS);
             });
         });
         

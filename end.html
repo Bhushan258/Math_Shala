@@ -3,26 +3,132 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Final Score</title>
+    <title>Math-Shala</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="game.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div id="end" class="flex-center flex-column">
-            <h1 id="finalscore">0</h1>
-            <form action="">
-                <input type="text" name="username" id="username" placeholder="Username">
-                <button type="submit" class="btn" id="SaveBtn" onclick="saveHighScore(event)" disabled>
-                    Save
-                </button>
-            </form>
-            <a href="question.html" class="btn">Play Again</a>
-            <a href="homepage.html" class="btn">Home</a>
+    <title>sfdgerg</title>
+    <!-- Image and text -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Math-Shala</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="std_topic.html">Standards and Topics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Coming Soon..</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+    <div id="mySidebar" class="sidebar">
+        <p id="linklist">
+            <a class="navbar-brand" id="side-head" href="index.html">Math-Shala</a>
+            <h4 style="text-align: center;">3rd Standard's Topics</h4>
+            <!-- <h3 class="link" >Shapes :</h3><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/CuboidTorF.js' >Cuboid</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/ConeTorF.js' >Cone</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/CylinderTorF.js' >Cylinder</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/SphereTorF.js' >Sphere</a></p><br>
+            <h3 class="link">Lines :</h3><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/StraightLineTorF.js' >Straight</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/CurvedLineTorF.js' >Curved</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/RectangleTorF.js' >Rectangle</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/CircleTorF.js' >Circle</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/SquareTorF.js' >Square</a></p><br>
+            <p><a class="link choice-topic" href="question2.html" data-js='2ndStd/TriangleTorF.js' >Triangle</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/addgrp(5-10).js' >Addition <br> of <br> groups</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/digplace.js' >Digit Places</a></p><br> -->
+            <p><a class="link choice-topic" href="question.html" data-js='3rdStd/divgrp.js' >Addition <br> (1 to 50)</a></p><br>
+            <!-- <p><a class="link choice-topic" href="question.html" data-js='2ndStd/findpatt.js' >Pattern <br> Finding</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/sub(1-50).js' >Subtraction</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/addsubrel.js' >Add and Sub <br>Relaion</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/comparison.js' >Comparison</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/numline.js' >Number Line</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/asc_dsc.js' >Ordering Number Set</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/numcreate.js' >Creating Number</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/ranks.js' >Ranks</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/addwtcry.js' >Addition <br> with Carry</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/subwbrw.js' >Subtraction <br> with Borrow</a></p><br>
+            <p><a class="link choice-topic" href="question.html" data-js='2ndStd/mult.js' >Multiplication</a></p><br> -->
+        </p>
     </div>
-    <script src="end.js"></script>
+
+    <div id="main">
+        <button class="openbtn" id="btn" value="OFF" onclick="toggle()">&#9776; Sidebar</button>
+    </div>
+
+    <script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+
+    function toggle() {
+        if (document.getElementById("btn").value == "OFF") {
+            document.getElementById("btn").value = "ON";
+            openNav();
+        } else {
+            document.getElementById("btn").value = "OFF";
+            closeNav();
+        }
+
+    }
+    </script>
+    <h3 id="std"><-:&nbsp3rd Standard&nbsp:-></h3>
+    <div class="center-col">
+        <div class="container">
+                <div id="end" class="flex-center flex-column">
+                    <h1>Score :</h1>
+                    <h1 id="finalscore">0</h1>
+                    <a id="curr" class="bttn">Play Again</a>
+                    <a id="Next" class="bttn">Next Topic</a>
+                    <a id="Pre"class="bttn">Previous Topic</a>
+                    <a href="homepage.html" class="bttn">Home</a>
+                </div>
+        </div>
+        <script src="end.js"></script>
+    </div>
+
+    <!--
+
+    <div class="right-col">
+        <h2>
+            text
+        </h2>
+    </div>
+
+    -->
 </body>
 
 </html>
+

@@ -1,8 +1,11 @@
 :root {
-    background-color: whitesmoke;
+    background-color: none;
     font-size: 95%;
 }
-
+body{
+    background-image: url(img/bg02.jpg);
+    background-repeat: repeat;
+}
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;

@@ -54,7 +54,7 @@ questions = [
     {
         imgsrc:"https://us.123rf.com/450wm/bankrx/bankrx1810/bankrx181000052/109045129-stock-vector-color-tangram-puzzle-in-dog-or-wolf-shape-on-white-background.jpg?ver=6",
         alt:"identity",
-        question:"What is the name of the sky blue coloured shape",
+        question:"What is the name of the sky blue coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -64,7 +64,7 @@ questions = [
     {
         imgsrc:"https://us.123rf.com/450wm/bankrx/bankrx1810/bankrx181000052/109045129-stock-vector-color-tangram-puzzle-in-dog-or-wolf-shape-on-white-background.jpg?ver=6",
         alt:"identity",
-        question:"What is the name of the red coloured shape",
+        question:"What is the name of the red coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -74,7 +74,7 @@ questions = [
     {
         imgsrc:"https://us.123rf.com/450wm/bankrx/bankrx1810/bankrx181000052/109045129-stock-vector-color-tangram-puzzle-in-dog-or-wolf-shape-on-white-background.jpg?ver=6",
         alt:"identity",
-        question:"What is the name of the green coloured shape",
+        question:"What is the name of the green coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -84,7 +84,7 @@ questions = [
     {
         imgsrc:"https://us.123rf.com/450wm/bankrx/bankrx1810/bankrx181000052/109045129-stock-vector-color-tangram-puzzle-in-dog-or-wolf-shape-on-white-background.jpg?ver=6",
         alt:"identity",
-        question:"What is the name of the yellow coloured shape",
+        question:"What is the name of the yellow coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -94,7 +94,7 @@ questions = [
     {
         imgsrc:"https://us.123rf.com/450wm/bankrx/bankrx1810/bankrx181000052/109045129-stock-vector-color-tangram-puzzle-in-dog-or-wolf-shape-on-white-background.jpg?ver=6",
         alt:"identity",
-        question:"What is the name of the orange coloured shape",
+        question:"What is the name of the orange coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -114,7 +114,7 @@ questions = [
     {
         imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
         alt:"identity",
-        question:"What is the name of the orange coloured shape",
+        question:"What is the name of the orange coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -124,7 +124,7 @@ questions = [
     {
         imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
         alt:"identity",
-        question:"What is the name of the blue coloured shape",
+        question:"What is the name of the blue coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -134,17 +134,7 @@ questions = [
     {
         imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
         alt:"identity",
-        question:"What is the name of the green coloured shape",
-        choice1:"Square",
-        choice2:"Rectangle",
-        choice3:"Triangle",
-        choice4:"Circle", 
-        answer:1,
-    },
-    {
-        imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
-        alt:"identity",
-        question:"What is the name of the white coloured shape",
+        question:"What is the name of the green coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -154,7 +144,17 @@ questions = [
     {
         imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
         alt:"identity",
-        question:"What is the name of the yellow coloured shape",
+        question:"What is the name of the white coloured shape?",
+        choice1:"Square",
+        choice2:"Rectangle",
+        choice3:"Triangle",
+        choice4:"Circle", 
+        answer:3,
+    },
+    {
+        imgsrc:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRhq_p0WhVtC-O-PUfE73q0XM6AJ-6FpLzOMQ&usqp=CAU",
+        alt:"identity",
+        question:"What is the name of the yellow coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -174,7 +174,7 @@ questions = [
     {
         imgsrc:"https://media.pixcove.com/B/9/9/Puzzle-Mystery-Textures-Backgrounds-Tangram-Chines-2629.jpg",
         alt:"identity",
-        question:"What is the name of the yellow coloured shape",
+        question:"What is the name of the yellow coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
@@ -184,7 +184,7 @@ questions = [
     {
         imgsrc:"https://media.pixcove.com/B/9/9/Puzzle-Mystery-Textures-Backgrounds-Tangram-Chines-2629.jpg",
         alt:"identity",
-        question:"What is the name of the dark blue coloured shape",
+        question:"What is the name of the dark blue coloured shape?",
         choice1:"Square",
         choice2:"Rectangle",
         choice3:"Triangle",
